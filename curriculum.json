@@ -1,0 +1,100 @@
+{
+  "app": "PyLab",
+  "version": 1,
+  "stages": [
+    {
+      "id": "stage1",
+      "title": "阶段 1 · 语法唤醒",
+      "summary": "8 节课重建 Python 核心语法，每节课都有可自动判定的练习。",
+      "locked": false,
+      "lessons": [
+        { "id": "1.0", "title": "导览：这套系统怎么用", "type": "reading", "file": "1.0.md", "minutes": 6 },
+        { "id": "1.1", "title": "数值与类型：金额为什么不能用 float", "type": "coding", "file": "1.1.md", "exercise": "1.1", "minutes": 25 },
+        { "id": "1.2", "title": "容器与推导式：选对数据结构", "type": "coding", "file": "1.2.md", "exercise": "1.2", "minutes": 30 },
+        { "id": "1.3", "title": "函数与作用域：闭包与可变默认参数", "type": "coding", "file": "1.3.md", "exercise": "1.3", "minutes": 30 },
+        { "id": "1.4", "title": "装饰器：不改原函数的增强", "type": "coding", "file": "1.4.md", "exercise": "1.4", "minutes": 35 },
+        { "id": "1.5", "title": "生成器：惰性求值", "type": "coding", "file": "1.5.md", "exercise": "1.5", "minutes": 30 },
+        { "id": "1.6", "title": "异常与上下文管理器：让出错也不毁数据", "type": "coding", "file": "1.6.md", "exercise": "1.6", "minutes": 35 },
+        { "id": "1.7", "title": "综合实战：带持久化的记账核心", "type": "coding", "file": "1.7.md", "exercise": "1.7", "minutes": 50 }
+      ]
+    },
+    {
+      "id": "stage2",
+      "title": "阶段 2 · 标准库实战",
+      "summary": "pathlib / re / logging / argparse，用标准库写出可撤销的文件整理工具。",
+      "locked": false,
+      "lessons": [
+        { "id": "2.0", "title": "pathlib：路径不是字符串", "type": "coding", "file": "2.0.md", "exercise": "2.0", "minutes": 30 },
+        { "id": "2.1", "title": "正则：从文本里精确取数", "type": "coding", "file": "2.1.md", "exercise": "2.1", "minutes": 35 },
+        { "id": "2.2", "title": "logging：把 print 换掉", "type": "coding", "file": "2.2.md", "exercise": "2.2", "minutes": 35 },
+        { "id": "2.3", "title": "argparse：命令行接口", "type": "coding", "file": "2.3.md", "exercise": "2.3", "minutes": 30 },
+        { "id": "2.4", "title": "综合：可撤销的文件整理器", "type": "coding", "file": "2.4.md", "exercise": "2.4", "minutes": 55 }
+      ]
+    },
+    {
+      "id": "stage3",
+      "title": "阶段 3 · 工程化",
+      "summary": "类型提示、dataclass、可测试设计，以及 pytest / ruff / CI 工具链。",
+      "locked": false,
+      "lessons": [
+        { "id": "3.0", "title": "类型提示：把契约写进代码", "type": "coding", "file": "3.0.md", "exercise": "3.0", "minutes": 30 },
+        { "id": "3.1", "title": "dataclass：数据不是字典", "type": "coding", "file": "3.1.md", "exercise": "3.1", "minutes": 35 },
+        { "id": "3.2", "title": "纯函数与依赖注入：让时间可控", "type": "coding", "file": "3.2.md", "exercise": "3.2", "minutes": 30 },
+        { "id": "3.3", "title": "工具链：pytest / ruff / CI", "type": "reading", "file": "3.3.md", "minutes": 25 },
+        { "id": "3.4", "title": "综合：可测试的重试策略", "type": "coding", "file": "3.4.md", "exercise": "3.4", "minutes": 40 }
+      ]
+    },
+    {
+      "id": "stage4",
+      "title": "阶段 4 · 异步与并发",
+      "summary": "async/await、gather、Semaphore、超时与重试；测试使用本地异步模拟服务，零外部依赖。",
+      "locked": false,
+      "lessons": [
+        { "id": "4.0", "title": "协程与并发：gather 的正确用法", "type": "coding", "file": "4.0.md", "exercise": "4.0", "minutes": 35 },
+        { "id": "4.1", "title": "并发上限：Semaphore", "type": "coding", "file": "4.1.md", "exercise": "4.1", "minutes": 30 },
+        { "id": "4.2", "title": "超时与失败隔离", "type": "coding", "file": "4.2.md", "exercise": "4.2", "minutes": 30 },
+        { "id": "4.3", "title": "httpx 实战与本地模拟服务", "type": "reading", "file": "4.3.md", "minutes": 30 },
+        { "id": "4.4", "title": "综合：带重试的批量抓取器", "type": "coding", "file": "4.4.md", "exercise": "4.4", "minutes": 50 }
+      ]
+    },
+    {
+      "id": "stage5",
+      "title": "阶段 5 · Web 后端",
+      "summary": "路由、请求校验、密码与令牌、FastAPI 实战；判题只测可离线验证的核心逻辑。",
+      "locked": false,
+      "lessons": [
+        { "id": "5.0", "title": "路由：方法、路径与参数", "type": "coding", "file": "5.0.md", "exercise": "5.0", "minutes": 35 },
+        { "id": "5.1", "title": "请求校验：把非法数据挡在门口", "type": "coding", "file": "5.1.md", "exercise": "5.1", "minutes": 35 },
+        { "id": "5.2", "title": "密码哈希与签名令牌", "type": "coding", "file": "5.2.md", "exercise": "5.2", "minutes": 40 },
+        { "id": "5.3", "title": "FastAPI 实战与分层", "type": "reading", "file": "5.3.md", "minutes": 40 },
+        { "id": "5.4", "title": "综合：四端点的迷你 API", "type": "coding", "file": "5.4.md", "exercise": "5.4", "minutes": 60 }
+      ]
+    },
+    {
+      "id": "stage6",
+      "title": "阶段 6 · 部署运维",
+      "summary": "Docker 镜像、Compose 多服务、Nginx 与 TLS、上线自查清单；全部为阅读课，需在真实服务器验证。",
+      "locked": false,
+      "lessons": [
+        { "id": "6.0", "title": "从本机到服务器：部署模型", "type": "reading", "file": "6.0.md", "minutes": 20 },
+        { "id": "6.1", "title": "Docker：把环境打进镜像", "type": "reading", "file": "6.1.md", "minutes": 35 },
+        { "id": "6.2", "title": "Compose：一键启动多服务", "type": "reading", "file": "6.2.md", "minutes": 35 },
+        { "id": "6.3", "title": "Nginx、HTTPS 与故障排查", "type": "reading", "file": "6.3.md", "minutes": 35 },
+        { "id": "6.4", "title": "上线自查清单与冒烟测试", "type": "reading", "file": "6.4.md", "minutes": 30 }
+      ]
+    },
+    {
+      "id": "stage7",
+      "title": "阶段 7 · 语言深度",
+      "summary": "描述符、元类、内存与弱引用、性能剖析，最后用迷你 ORM 收官。",
+      "locked": false,
+      "lessons": [
+        { "id": "7.0", "title": "描述符：属性访问的底层", "type": "coding", "file": "7.0.md", "exercise": "7.0", "minutes": 40 },
+        { "id": "7.1", "title": "元类：控制类的创建", "type": "coding", "file": "7.1.md", "exercise": "7.1", "minutes": 40 },
+        { "id": "7.2", "title": "内存与弱引用：__slots__ 与缓存", "type": "coding", "file": "7.2.md", "exercise": "7.2", "minutes": 35 },
+        { "id": "7.3", "title": "性能剖析：先测量再优化", "type": "reading", "file": "7.3.md", "minutes": 25 },
+        { "id": "7.4", "title": "综合：描述符 + 元类实现迷你 ORM", "type": "coding", "file": "7.4.md", "exercise": "7.4", "minutes": 60 }
+      ]
+    }
+  ]
+}

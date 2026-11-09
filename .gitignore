@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+dist/
+data/progress.json
+data/server.log
+data/server.pid
+data/server.port
+data/*.tmp
+.DS_Store

@@ -1,0 +1,12 @@
+{
+  "name": "PyLab",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postStartCommand": "mkdir -p data && (nohup python3 server.py --no-open --port 8000 > data/server.log 2>&1 &)",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "PyLab",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}

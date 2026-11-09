@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PyLab · Python 学习与验证</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234d8ef0'/%3E%3Ctext x='50' y='70' font-size='54' text-anchor='middle' font-family='sans-serif' font-weight='bold' fill='%2307101f'%3EPy%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/style.css?v={{CSS_VERSION}}">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">Py</div>
+        <div class="brand-text">
+          <strong>PyLab</strong>
+          <span>系统化学习与验证</span>
+        </div>
+      </div>
+
+      <div class="overall">
+        <div class="overall-row">
+          <span>总进度</span>
+          <span id="overallText">0 / 0</span>
+        </div>
+        <div class="progress"><i id="overallBar"></i></div>
+      </div>
+
+      <nav class="curriculum" id="curriculum">
+        <div class="loading">加载中…</div>
+      </nav>
+
+      <div class="sidebar-foot">
+        <kbd>Ctrl</kbd>+<kbd>Enter</kbd> 运行
+        <span class="sep">·</span>
+        <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd> 检查
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="title-block">
+          <div class="eyebrow" id="stageLabel">PyLab</div>
+          <h1 id="lessonTitle">准备开始</h1>
+        </div>
+        <div class="top-actions">
+          <span class="pill" id="lessonMeta"></span>
+          <button class="btn ghost" id="markBtn" hidden>标记完成</button>
+        </div>
+      </header>
+
+      <div class="split no-ws" id="split">
+        <article class="content" id="content">
+          <div class="empty">
+            <h2>欢迎使用 PyLab</h2>
+            <p>从左侧选择课程开始。每节课都有正文和可以自动判定的练习。</p>
+          </div>
+        </article>
+
+        <section class="workspace" id="workspace" hidden>
+          <div class="ws-head">
+            <div class="ws-title">练习 <span id="exerciseId"></span></div>
+            <div class="ws-actions">
+              <button class="btn ghost" id="solutionBtn">参考答案</button>
+              <button class="btn ghost" id="resetBtn">重置</button>
+              <button class="btn ghost" id="runBtn">运行</button>
+              <button class="btn primary" id="checkBtn">检查</button>
+            </div>
+          </div>
+          <div class="editor-shell">
+            <div class="gutter" id="gutter">1</div>
+            <textarea id="editor" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+          </div>
+          <div class="output" id="output">
+            <div class="output-empty">运行或检查的结果会显示在这里</div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal" id="solutionModal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="solutionTitle">
+      <div class="modal-head">
+        <div class="modal-title" id="solutionTitle">参考答案</div>
+        <div class="modal-actions">
+          <button class="btn ghost" id="copySolution">复制</button>
+          <button class="btn ghost" id="closeSolution">关闭</button>
+        </div>
+      </div>
+      <pre class="modal-code"><code id="solutionCode"></code></pre>
+      <div class="modal-foot">参考实现不是唯一解。看完关掉，凭记忆重写一遍，否则等于没学。</div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="/static/app.js?v={{JS_VERSION}}"></script>
+</body>
+</html>
